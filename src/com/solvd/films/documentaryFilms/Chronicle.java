@@ -1,4 +1,4 @@
-package documentaryFilms;
+package com.solvd.films.documentaryFilms;
 
 public class Chronicle extends DocumentaryFilm{
 
@@ -27,6 +27,7 @@ public class Chronicle extends DocumentaryFilm{
         System.out.println("Name: " + getName());
         System.out.println("Release year: " + getRelease_year() +"year");
         System.out.println("Duration minutes: " + getDuration_minutes() + "minutes");
+        System.out.println("Actual news: " + getNews());
     }
 
 }

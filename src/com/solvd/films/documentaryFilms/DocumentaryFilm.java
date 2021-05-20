@@ -1,4 +1,4 @@
-package documentaryFilms;
+package com.solvd.films.documentaryFilms;
 
 public abstract class DocumentaryFilm {
 
