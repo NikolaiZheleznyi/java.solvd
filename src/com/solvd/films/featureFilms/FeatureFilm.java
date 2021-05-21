@@ -3,18 +3,18 @@ package com.solvd.films.featureFilms;
 public abstract class FeatureFilm {
 
     private String name;
-    private int release_year;
-    private int duration_minutes;
+    private int releaseYear;
+    private int durationMinutes;
     private String producer;
 
     public FeatureFilm(){
 
     }
 
-    public FeatureFilm(String name, int release_year, int duration_minutes, String producer){
+    public FeatureFilm(String name, int releaseYear, int durationMinutes, String producer){
         this.name = name;
-        this.release_year = release_year;
-        this.duration_minutes = duration_minutes;
+        this.releaseYear = releaseYear;
+        this.durationMinutes = durationMinutes;
         this.producer = producer;
     }
 
@@ -28,20 +28,20 @@ public abstract class FeatureFilm {
         this.name = name;
     }
 
-    public int getRelease_year(){
-        return release_year;
+    public int getReleaseYear(){
+        return releaseYear;
     }
 
-    public void setRelease_year(int release_year){
-        this.release_year = release_year;
+    public void setReleaseYear(int releaseYear){
+        this.releaseYear = releaseYear;
     }
 
-    public int getDuration_minutes(){
-        return duration_minutes;
+    public int getDurationMinutes(){
+        return durationMinutes;
     }
 
-    public void setDuration_minutes(int duration_minutes){
-        this.duration_minutes = duration_minutes;
+    public void setDurationMinutes(int durationMinutes){
+        this.durationMinutes = durationMinutes;
     }
 
     public String getProducer(){

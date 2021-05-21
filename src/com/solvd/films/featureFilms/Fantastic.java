@@ -1,26 +1,25 @@
-package com.solvd.films.featureFilms.fantastic;
+package com.solvd.films.featureFilms;
 
-import com.solvd.films.featureFilms.FeatureFilm;
 
 public class Fantastic extends FeatureFilm {
 
     public Fantastic(){
         setName("Back to the future");
-        setRelease_year(1985);
-        setDuration_minutes(116);
+        setReleaseYear(1985);
+        setDurationMinutes(116);
         setProducer("Robert Zemecis");
     }
 
-    public Fantastic(String name, int release_year, int duration_minutes, String producer){
-        super(name, release_year, duration_minutes, producer);
+    public Fantastic(String name, int releaseYear, int durationMinutes, String producer){
+        super(name, releaseYear, durationMinutes, producer);
     }
 
     @Override
     public void printInfo(){
         System.out.println("Fantastic");
         System.out.println("Name: " + getName());
-        System.out.println("Release year: " + getRelease_year() +" year");
-        System.out.println("Duration minutes: " + getDuration_minutes() + " minutes");
+        System.out.println("Release year: " + getReleaseYear() +" year");
+        System.out.println("Duration minutes: " + getDurationMinutes() + " minutes");
         System.out.println("Producer: " + getProducer());
     }
 }

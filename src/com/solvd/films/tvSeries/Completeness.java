@@ -1,2 +1,5 @@
-package com.solvd.films.tvSeries;public class Completeness {
+package com.solvd.films.tvSeries;
+
+public interface Completeness {
+    public void seriesOver();
 }

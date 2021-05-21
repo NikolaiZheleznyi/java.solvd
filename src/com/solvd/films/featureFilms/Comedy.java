@@ -1,38 +1,37 @@
-package com.solvd.films.featureFilms.comedy;
+package com.solvd.films.featureFilms;
 
-import com.solvd.films.featureFilms.FeatureFilm;
 
 public class Comedy extends FeatureFilm {
 
-    private int funny_moments;
+    private int funnyMoments;
 
     public Comedy(){
         setName("Intern");
-        setRelease_year(2015);
-        setDuration_minutes(121);
+        setReleaseYear(2015);
+        setDurationMinutes(121);
         setProducer("Nancy Myers");
-        setFunny_moments(12);
+        setFunnyMoments(12);
     }
 
-    public Comedy(String name, int release_year, int duration_minutes, String producer, int funny_moments){
-        super(name, release_year, duration_minutes, producer);
-        this.funny_moments = funny_moments;
+    public Comedy(String name, int releaseYear, int durationMinutes, String producer, int funnyMoments){
+        super(name, releaseYear, durationMinutes, producer);
+        this.funnyMoments = funnyMoments;
     }
 
-    public int getFunny_moments(){
-        return funny_moments;
+    public int getFunnyMoments(){
+        return funnyMoments;
     }
-    public void setFunny_moments(int funny_moments){
-        this.funny_moments = funny_moments;
+    public void setFunnyMoments(int funnyMoments){
+        this.funnyMoments = funnyMoments;
     }
 
     @Override
     public void printInfo(){
         System.out.println("Comedy");
         System.out.println("Name: " + getName());
-        System.out.println("Release year: " + getRelease_year() +" year");
-        System.out.println("Duration minutes: " + getDuration_minutes() + " minutes");
+        System.out.println("Release year: " + getReleaseYear() +" year");
+        System.out.println("Duration minutes: " + getDurationMinutes() + " minutes");
         System.out.println("Producer: " + getProducer());
-        System.out.println("Funny moments in film: " + getFunny_moments());
+        System.out.println("Funny moments in film: " + getFunnyMoments());
     }
 }
