@@ -7,7 +7,11 @@ public class Drama extends FeatureFilm {
     private int moments_of_tears;
 
     public Drama(){
-
+        setName("Green Mile");
+        setRelease_year(1999);
+        setDuration_minutes(189);
+        setProducer("Frank Darabont");
+        setMoments_of_tears(7);
     }
 
     public Drama(String name, int release_year, int duration_minutes, String producer, int moments_of_tears){

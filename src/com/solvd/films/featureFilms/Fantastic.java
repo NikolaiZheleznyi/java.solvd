@@ -5,7 +5,10 @@ import com.solvd.films.featureFilms.FeatureFilm;
 public class Fantastic extends FeatureFilm {
 
     public Fantastic(){
-
+        setName("Back to the future");
+        setRelease_year(1985);
+        setDuration_minutes(116);
+        setProducer("Robert Zemecis");
     }
 
     public Fantastic(String name, int release_year, int duration_minutes, String producer){

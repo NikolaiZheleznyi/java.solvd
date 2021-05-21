@@ -7,7 +7,11 @@ public class Comedy extends FeatureFilm {
     private int funny_moments;
 
     public Comedy(){
-
+        setName("Intern");
+        setRelease_year(2015);
+        setDuration_minutes(121);
+        setProducer("Nancy Myers");
+        setFunny_moments(12);
     }
 
     public Comedy(String name, int release_year, int duration_minutes, String producer, int funny_moments){
