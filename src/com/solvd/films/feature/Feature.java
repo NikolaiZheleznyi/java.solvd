@@ -1,17 +1,17 @@
-package com.solvd.films.featureFilms;
+package com.solvd.films.feature;
 
-public abstract class FeatureFilm {
+public abstract class Feature extends Rating {
 
     private String name;
     private int releaseYear;
     private int durationMinutes;
     private String producer;
 
-    public FeatureFilm(){
+    public Feature(){
 
     }
 
-    public FeatureFilm(String name, int releaseYear, int durationMinutes, String producer){
+    public Feature(String name, int releaseYear, int durationMinutes, String producer){
         this.name = name;
         this.releaseYear = releaseYear;
         this.durationMinutes = durationMinutes;

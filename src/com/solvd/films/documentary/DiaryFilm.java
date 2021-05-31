@@ -1,6 +1,6 @@
-package com.solvd.films.documentaryFilms;
+package com.solvd.films.documentary;
 
-public class DiaryFilm extends DocumentaryFilm{
+public class DiaryFilm extends Documentary {
 
     private String personal_memories_hero;
 
