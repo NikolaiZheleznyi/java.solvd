@@ -1,6 +1,8 @@
-package com.solvd.films.featureFilms;
+package com.solvd.films.feature;
 
-public class Cartoon extends FeatureFilm{
+import java.util.Scanner;
+
+public class Cartoon extends Feature {
 
     private int ageCategory;
 
@@ -30,5 +32,13 @@ public class Cartoon extends FeatureFilm{
         System.out.println("Duration minutes: " + getDurationMinutes() + " minutes");
         System.out.println("Producer: " + getProducer());
         System.out.println("Age rating category: " +"+"+ getAgeCategory());
+    }
+    @Override
+    public void indicateRating(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Rate the film with an integer from 1 to 10: ");
+        int num = in.nextInt();
+        System.out.println("You rate the film at: " + num);
+
     }
 }

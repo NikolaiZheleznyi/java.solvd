@@ -1,16 +1,16 @@
-package com.solvd.films.documentaryFilms;
+package com.solvd.films.documentary;
 
-public abstract class DocumentaryFilm {
+public abstract class Documentary {
 
     private String name;
     private int release_year;
     private int duration_minutes;
 
-    public DocumentaryFilm(){
+    public Documentary(){
 
     }
 
-    public DocumentaryFilm(String name, int release_year, int duration_minutes){
+    public Documentary(String name, int release_year, int duration_minutes){
         this.name = name;
         this.release_year = release_year;
         this.duration_minutes = duration_minutes;

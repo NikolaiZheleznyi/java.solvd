@@ -1,6 +1,6 @@
-package com.solvd.films.documentaryFilms;
+package com.solvd.films.documentary;
 
-public class Chronicle extends DocumentaryFilm{
+public class Chronicle extends Documentary {
 
     private String news;
 

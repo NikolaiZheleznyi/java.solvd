@@ -1,7 +1,9 @@
-package com.solvd.films.featureFilms;
+package com.solvd.films.feature;
 
 
-public class Drama extends FeatureFilm {
+import java.util.Scanner;
+
+public class Drama extends Feature {
 
     private int momentsTears;
 
@@ -33,6 +35,13 @@ public class Drama extends FeatureFilm {
         System.out.println("Duration minutes: " + getDurationMinutes() + " minutes");
         System.out.println("Producer: " + getProducer());
         System.out.println("Moments of tears in film: " + getMomentsTears());
+    }
+    @Override
+    public void indicateRating() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Rate the film with an float from 1,0 to 10,0: ");
+        float num = in.nextFloat();
+        System.out.println("You rate the film at: " + num);
     }
 }
 
