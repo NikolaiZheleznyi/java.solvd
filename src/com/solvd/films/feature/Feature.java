@@ -51,4 +51,9 @@ public abstract class Feature extends Rating {
     public void setProducer(String producer){
         this.producer = producer;
     }
+
+    public String toString(){
+        return ("Name: " + getName() + "\nRelease year: " + getReleaseYear() +" year" + "\nDuration minutes: " + getDurationMinutes() + " minutes" + "\nProducer: " + getProducer());
+    }
 }
+

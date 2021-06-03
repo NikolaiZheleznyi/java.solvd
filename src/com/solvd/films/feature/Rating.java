@@ -7,5 +7,7 @@ public class Rating {
         Scanner in = new Scanner(System.in);
         System.out.println("Input rating film: ");
         int num = in.nextInt();
+        System.out.println("You rate the film at: " + num);
     }
+
 }
