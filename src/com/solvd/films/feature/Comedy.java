@@ -1,7 +1,6 @@
 package com.solvd.films.feature;
 
-
-import java.util.Scanner;
+;
 
 public class Comedy extends Feature {
 
