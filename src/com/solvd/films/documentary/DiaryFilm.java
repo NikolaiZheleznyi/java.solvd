@@ -22,13 +22,7 @@ public class DiaryFilm extends Documentary {
     }
 
     @Override
-    public void printInfo(){
-        System.out.println("Diary");
-        System.out.println("Name: " + getName());
-        System.out.println("Release year: " + getRelease_year() +" year");
-        System.out.println("Duration minutes: " + getDuration_minutes() + " minutes");
-        System.out.println("Personal memories of the hero: " + getPersonal_memories_hero());
-    }
+    public String toString(){return ("Name: "+getName()+"\nRelease year: " + getRelease_year() +" year" + "\nDuration minutes: " + getDuration_minutes() + " minutes"+"\nPersonal memories of the hero: " + getPersonal_memories_hero());}
 
 }
 

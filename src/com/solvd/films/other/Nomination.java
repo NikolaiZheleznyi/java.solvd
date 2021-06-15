@@ -1,4 +1,4 @@
-package com.solvd.films.nomination;
+package com.solvd.films.other;
 
 import com.solvd.films.feature.Feature;
 
@@ -14,11 +14,8 @@ public class Nomination {
                 return this.name;
         }
 
-        public void printInfo(){
-                System.out.println(this.name.getName());
-        }
-
         public void bestEditing(){
+                System.out.println(this.name.getName());
                 System.out.println("Winner in nomination Best Edition");
         }
 }

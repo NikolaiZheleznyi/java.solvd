@@ -18,7 +18,6 @@ public abstract class Feature extends Rating {
         this.producer = producer;
     }
 
-    public abstract void printInfo();
 
     public String getName(){
         return name;

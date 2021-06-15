@@ -14,8 +14,9 @@ public class Cartoon extends Feature {
     }
 
     @Override
-    public void printInfo(){
-        System.out.println("Cartoon");
+    public String toString(){
+        return ("Cartoon\n" + "Name: " + getName() + "\nRelease year: " + getReleaseYear() +" year" + "\nDuration minutes: " + getDurationMinutes() + " minutes" + "\nProducer: " + getProducer());
     }
+
 
 }

@@ -22,12 +22,7 @@ public class Chronicle extends Documentary {
     }
 
     @Override
-    public void printInfo(){
-        System.out.println("Chronicle");
-        System.out.println("Name: " + getName());
-        System.out.println("Release year: " + getRelease_year() +"year");
-        System.out.println("Duration minutes: " + getDuration_minutes() + "minutes");
-        System.out.println("Actual news: " + getNews());
-    }
+    public String toString(){return ("Name: "+getName()+"\nRelease year: " + getRelease_year() +" year" + "\nDuration minutes: " + getDuration_minutes() + "\nminutes"+"Actual news: " + getNews());}
+
 
 }

@@ -17,9 +17,10 @@ public class Drama extends Feature {
     }
 
     @Override
-    public void printInfo(){
-        System.out.println("Drama");
+    public String toString(){
+        return ("Drama\n" + "Name: " + getName() + "\nRelease year: " + getReleaseYear() +" year" + "\nDuration minutes: " + getDurationMinutes() + " minutes" + "\nProducer: " + getProducer());
     }
+
 }
 
 
