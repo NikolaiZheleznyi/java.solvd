@@ -5,25 +5,25 @@ public abstract class TVseries implements Completeness {
     private String name;
     private int releaseYear;
     private int runtime;
-    private int numberOFseasons;
     private String producer;
-    private String serialStatus;
+
 
     public TVseries(){
 
     }
 
-    public TVseries(String name, int releaseYear, int runtime, int numberOFseasons, String producer, String serialStatus){
+    public TVseries(String name, int releaseYear, int runtime, String producer){
         this.name = name;
         this.releaseYear = releaseYear;
         this.runtime = runtime;
-        this.numberOFseasons = numberOFseasons;
         this.producer = producer;
-        this.serialStatus = serialStatus;
+
 
     }
 
-    public abstract void printInfo();
+    public String toString(){
+        return ("Name: " + getName() + "\nRelease year: " + getReleaseYear() +" year" + "\nDuration minutes: " + getRuntime() + " minutes" + "\nProducer: " + getProducer());
+    }
 
     public String getName(){
         return name;
@@ -49,14 +49,6 @@ public abstract class TVseries implements Completeness {
         this.runtime = runtime;
     }
 
-    public int getNumberOFseasons(){
-        return numberOFseasons;
-    }
-
-    public void setNumberOFseasons(int numberOFseasons){
-        this.numberOFseasons = numberOFseasons;
-    }
-
     public String getProducer(){
         return producer;
     }
@@ -65,12 +57,6 @@ public abstract class TVseries implements Completeness {
         this.producer = producer;
     }
 
-    public String getSerialStatus(){
-        return serialStatus;
-    }
 
-    public void setSerialStatus(String serialStatus){
-        this.serialStatus = serialStatus;
-    }
 
 }

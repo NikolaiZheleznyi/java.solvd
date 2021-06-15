@@ -15,8 +15,8 @@ public class Fantastic extends Feature {
     }
 
     @Override
-    public void printInfo(){
-        System.out.println("Fantastic");
+    public String toString(){
+        return ("Fantasy\n" + "Name: " + getName() + "\nRelease year: " + getReleaseYear() +" year" + "\nDuration minutes: " + getDurationMinutes() + " minutes" + "\nProducer: " + getProducer());
     }
 
 }

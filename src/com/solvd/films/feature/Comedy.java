@@ -19,9 +19,9 @@ public class Comedy extends Feature {
 
 
     @Override
-    public void printInfo(){
-        System.out.println("Comedy");
-
+    public String toString(){
+        return ("Comedy\n" + "Name: " + getName() + "\nRelease year: " + getReleaseYear() +" year" + "\nDuration minutes: " + getDurationMinutes() + " minutes" + "\nProducer: " + getProducer());
     }
+
 
 }

@@ -16,7 +16,7 @@ public abstract class Documentary {
         this.duration_minutes = duration_minutes;
     }
 
-    public abstract void printInfo();
+    public String toString(){return ("Name: "+getName()+"\nRelease year: " + getRelease_year() +" year" + "\nDuration minutes: " + getDuration_minutes() + " minutes");}
 
         public String getName(){
         return name;
