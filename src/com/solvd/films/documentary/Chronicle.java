@@ -22,7 +22,7 @@ public class Chronicle extends Documentary {
     }
 
     @Override
-    public String toString(){return ("Name: "+getName()+"\nRelease year: " + getRelease_year() +" year" + "\nDuration minutes: " + getDuration_minutes() + "\nminutes"+"Actual news: " + getNews());}
+    public String toString(){return ("Name: "+getName()+"\nRelease year: " + getRelease_year() +" year" + "\nDuration minutes: " + getDuration_minutes() + "\nActual news: " + getNews());}
 
 
 }

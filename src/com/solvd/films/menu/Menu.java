@@ -24,16 +24,19 @@ public class Menu {
             String category = in.nextLine();
             switch (category) {
                 case "chronicle":
-                    Map<Integer, String> chronicle = new HashMap<Integer, String>();
-                    chronicle.put(1, "Chronicle Tod`s");
-                    chronicle.put(2, "My way");
-                    chronicle.put(3, "Night");
-                    chronicle.put(4, "sdkfds");
-                    chronicle.remove(4);
+                    Chronicle chronicle1 = new Chronicle("Chronicle Tod`s", 2020, 120, 	"Yes");
+                    Chronicle chronicle2 = new Chronicle("My way", 1999, 63, 	"No");
+                    Chronicle chronicle4 = new Chronicle("Night", 2012, 78, 	"No");
+                    Chronicle chronicle5 = new Chronicle("After world of war", 1945, 134, 	"Yes");
 
-                    Set<Integer> keys = chronicle.keySet();
-                    Collection<String> values = chronicle.values();
-                    for(Map.Entry<Integer, String> item: chronicle.entrySet()){System.out.printf("Key: %d Value: %s \n",item.getKey(), item.getValue());}
+                    Map<Integer, Chronicle> chronicle = new HashMap<Integer, Chronicle>();
+                    chronicle.put(1, chronicle1);
+                    chronicle.put(2, chronicle2);
+                    chronicle.put(3, chronicle4);
+                    chronicle.put(4, chronicle5);
+                    chronicle.remove(4);
+                    System.out.println(chronicle.get(2));
+
                     index = 10;
                     break;
                 case "diary":
