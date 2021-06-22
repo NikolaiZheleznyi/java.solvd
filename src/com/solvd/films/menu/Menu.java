@@ -7,6 +7,7 @@ import com.solvd.films.feature.Comedy;
 import com.solvd.films.feature.Drama;
 import com.solvd.films.feature.Cartoon;
 import com.solvd.films.feature.Fantastic;
+import com.solvd.films.other.Comments;
 import com.solvd.films.other.Nomination;
 import com.solvd.films.tvSeries.MiniSeries;
 import com.solvd.films.tvSeries.Prequel;
@@ -69,6 +70,17 @@ public class Menu {
 
                     Rating dramaRate = new Drama();
                     dramaRate.indicateRating();
+                    System.out.println("Do you want to like?\n1 - yes\n2 - no");
+                    try {
+                        int like = in.nextInt();
+                        if (like == 1) {
+                            Comments comments = new Comments();
+                            comments.commentDrama();
+                        } else {
+                            System.out.println("very sorry");
+                        }
+                    }
+                    catch (InputMismatchException ex){ System.out.println("You must enter 1 or 2");}
                     System.out.println("----------------------");
                     index = 10;
                     break;
