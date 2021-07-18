@@ -12,16 +12,20 @@ import com.solvd.films.other.Nomination;
 import com.solvd.films.tvSeries.MiniSeries;
 import com.solvd.films.tvSeries.Prequel;
 import com.solvd.films.other.FilmsBox;
+import org.apache.log4j.Logger;
+
 
 import java.util.*;
 
 public class Menu {
 
+    private final static Logger LOGGER = Logger.getLogger(Menu.class);
+
     public void startMenu() {
         int index = 0;
         do {
             Scanner in = new Scanner(System.in);
-            System.out.println("What interests you (chronicle, diary, comedy, drama, cartoon, fantastic, miniseries, prequal): ");
+            LOGGER.info("What interests you (chronicle, diary, comedy, drama, cartoon, fantastic, miniseries, prequal): ");
             String category = in.nextLine();
             switch (category) {
                 case "chronicle":
@@ -36,7 +40,7 @@ public class Menu {
                     chronicle.put(3, chronicle4);
                     chronicle.put(4, chronicle5);
                     chronicle.remove(4);
-                    System.out.println(chronicle.get(2));
+                    LOGGER.info(chronicle.get(2));
 
                     index = 10;
                     break;
@@ -46,14 +50,16 @@ public class Menu {
                     diaryFilm1.add(new DiaryFilm("Runway", 1962,28,"unknow"));
 
                     for (DiaryFilm p :diaryFilm1){
-                        System.out.println("Name: " + p.getName());
-                            System.out.println("Release year: " + p.getRelease_year() + " Duration minutes: " +p.getDuration_minutes());
+                        LOGGER.info("Name: " + p.getName());
+                        LOGGER.info("Release year: " + p.getRelease_year() + " Duration minutes: " +p.getDuration_minutes());
                     }
                     index = 10;
                     break;
                 case "comedy":
                     Comedy comedy = new Comedy();
-                    System.out.println(comedy.toString());
+                    LOGGER.info(comedy.toString());
+                    LOGGER.info("=============");
+
 
                     Rating comedyRate = new Comedy();
                     comedyRate.indicateRating();
@@ -61,45 +67,46 @@ public class Menu {
                     Nomination nomination = new Nomination();
                     nomination.addName(comedy);
                     nomination.bestEditing();
-                    System.out.println("----------------------");
+                    LOGGER.info("----------------------");
                     index = 10;
                     break;
                 case "drama":
                     Drama drama = new Drama();
-                    System.out.println(drama.toString());
-
-                    Rating dramaRate = new Drama();
-                    dramaRate.indicateRating();
-                    System.out.println("Do you want to like?\n1 - yes\n2 - no");
+                    LOGGER.info(drama.toString());
                     try {
+                        Rating dramaRate = new Drama();
+                        dramaRate.indicateRating();
+                        LOGGER.info("Do you want to like?\n1 - yes\n2 - no");
+
                         int like = in.nextInt();
                         if (like == 1) {
                             Comments comments = new Comments();
                             comments.commentDrama();
                         } else {
-                            System.out.println("very sorry");
+                            LOGGER.info("very sorry");
                         }
                     }
+                    catch (ArithmeticException e){System.out.println("Rating will be no more 10");}
                     catch (InputMismatchException ex){ System.out.println("You must enter 1 or 2");}
-                    System.out.println("----------------------");
+                    LOGGER.info("----------------------");
                     index = 10;
                     break;
                 case "fantastic":
                     Fantastic fantastic = new Fantastic();
-                    System.out.println(fantastic.toString());
+                    LOGGER.info(fantastic.toString());
 
                     Rating fantastRate = new Fantastic();
                     fantastRate.indicateRating();
-                    System.out.println("----------------------");
+                    LOGGER.info("----------------------");
                     index = 10;
                     break;
                 case "cartoon":
                     Cartoon cartoon = new Cartoon();
-                    System.out.println(cartoon.toString());
+                    LOGGER.info(cartoon.toString());
 
                     Rating upRate = new Cartoon();
                     upRate.indicateRating();
-                    System.out.println("----------------------");
+                    LOGGER.info("----------------------");
                     index = 10;
                     break;
                 case "miniseries":
@@ -111,7 +118,7 @@ public class Menu {
                     miniShowBox.setListMinishow(miniSeries2);
 
                     for(MiniSeries miniSeries : miniShowBox.getListMinishow()){
-                        System.out.println(miniSeries.toString());
+                        LOGGER.info(miniSeries.toString());
                     }
                     index = 10;
                     break;
@@ -124,12 +131,12 @@ public class Menu {
                     showBox.setListPrequel(prequel2);
 
                     for(Prequel prequel : showBox.getListPrequel()){
-                        System.out.println(prequel.toString());
+                        LOGGER.info(prequel.toString());
                     }
                     index = 10;
                     break;
                 default:
-                    System.out.println("Not found, try again");
+                    LOGGER.info("Not found, try again");
                     break;
             }
             index++;

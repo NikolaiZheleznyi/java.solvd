@@ -12,7 +12,7 @@ public class Rating {
             System.out.println("Input rating film: ");
             int num = in.nextInt();
             if (num > 10) {
-                throw new Exception("Rating will be no more 10");
+                throw new ArithmeticException("Rating will be no more 10");
 
             }
             System.out.println("You rate the film at: " + num);
@@ -21,9 +21,9 @@ public class Rating {
 
         System.out.println(ex.getMessage());
         }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
+        //catch (Exception e) {
+        //    e.printStackTrace();
+        //}
     }
 
 }
