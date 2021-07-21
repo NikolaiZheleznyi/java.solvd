@@ -13,7 +13,8 @@ import com.solvd.films.tvSeries.MiniSeries;
 import com.solvd.films.tvSeries.Prequel;
 import com.solvd.films.other.FilmsBox;
 import org.apache.log4j.Logger;
-
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.*;
 
@@ -21,7 +22,7 @@ public class Menu {
 
     private final static Logger LOGGER = Logger.getLogger(Menu.class);
 
-    public void startMenu() {
+    public void startMenu() throws JsonProcessingException {
         int index = 0;
         do {
             Scanner in = new Scanner(System.in);
@@ -57,7 +58,8 @@ public class Menu {
                     break;
                 case "comedy":
                     Comedy comedy = new Comedy();
-                    LOGGER.info(comedy.toString());
+                    String resultJson = new ObjectMapper().writeValueAsString(comedy);
+                    LOGGER.info(resultJson);
                     LOGGER.info("=============");
 
 
@@ -68,6 +70,7 @@ public class Menu {
                     nomination.addName(comedy);
                     nomination.bestEditing();
                     LOGGER.info("----------------------");
+
                     index = 10;
                     break;
                 case "drama":
