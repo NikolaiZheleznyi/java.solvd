@@ -2,8 +2,8 @@ package com.solvd.films.tvSeries;
 
 public class MiniSeries extends TVseries{
 
-    public MiniSeries(String chernobyl){
-        setName("");
+    public MiniSeries(){
+        setName("chernobyl");
         setReleaseYear(2015);
         setRuntime(270);
         setProducer("Cary Scogland");
