@@ -105,7 +105,7 @@ public class Menu {
                     break;
                 case "cartoon":
                     Cartoon cartoon = new Cartoon();
-                    LOGGER.info(cartoon.toString());
+                    LOGGER.info(cartoon.infoCartoon());
 
                     Rating upRate = new Cartoon();
                     upRate.indicateRating();
